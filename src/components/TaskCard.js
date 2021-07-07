@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import { Box, Grid, Typography, Button, makeStyles } from "@material-ui/core";
 import { differenceInMinutes, format } from "date-fns";

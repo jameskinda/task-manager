@@ -6,7 +6,7 @@ export default (props) => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Typography variant="h6" style={{ "font-weight": "600" }}>
+        <Typography variant="h6" style={{ fontWeight: "600" }}>
           To Do
         </Typography>
 

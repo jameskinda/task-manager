@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React, { useState } from "react";
 import {
   Box,
@@ -17,15 +18,11 @@ import {
 } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 
-const initState = {
-  dueOn: "",
-  title: "",
-  type: "Family",
-  location: "In person",
-  description: "",
-};
-
 export default (props) => {
+  const taskDetails = props.taskDetails;
+  const setTaskDetails = props.setTaskDetails;
+  const initState = props.initState;
+
   const hanndleChange = (e) => {
     e.persist();
     setTaskDetails((oldState) => ({
@@ -34,12 +31,10 @@ export default (props) => {
     }));
   };
 
-  const [taskDetails, setTaskDetails] = useState(initState);
-
   const handleSubmit = () => {
     for (const field in taskDetails) {
       if (typeof taskDetails[field] == "string" && !taskDetails[field]) {
-        return console.log("not valid");
+        return;
       }
     }
     props.postTask({ ...taskDetails, dueOn: Date.parse(taskDetails.dueOn) });

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default [
   {
     id: 1,
@@ -22,7 +23,7 @@ export default [
     title: "Pick up document",
     type: "Work",
     location: "In person",
-    description: "Get document for the client in room 123A",
+    description: "Get document from the client in room 123A",
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ export default [
   },
   {
     id: 5,
-    dueOn: new Date().setHours(new Date().getHours() + 6),
+    dueOn: new Date().setHours(new Date().getHours() + 2),
     title: "Take dog to beach",
     type: "Family",
     location: "In person",
@@ -42,13 +43,10 @@ export default [
   },
   {
     id: 6,
-    dueOn: new Date().setHours(new Date().getHours() + 2),
-    title: "Pick up dry cleaning",
-    type: "Appointment",
-    location: "In person",
-    description: "Go get your 5 dress shirts",
+    dueOn: new Date().setHours(new Date().getHours() + 3),
+    title: "Zoom Class",
+    type: "School",
+    location: "Virtual",
+    description: "Class at 5pm",
   },
 ];
-
-// type: [work, friends, family, significant other, appointment, misc.s]
-// location: [virtual, in-person,]

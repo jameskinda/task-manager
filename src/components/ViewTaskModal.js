@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import {
   Box,
@@ -76,6 +77,9 @@ export default (props) => {
           </Box>
         </Box>
         <DialogActions>
+          <Button variant="outlined" onClick={() => props.editTask(props.task)}>
+            Edit
+          </Button>
           <Button
             variant="outlined"
             onClick={() => props.complete(props.task.id)}

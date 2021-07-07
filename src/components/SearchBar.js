@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import React from "react";
 import {
   Box,
@@ -80,7 +81,10 @@ export default (props) => {
             variant="contained"
             color="primary"
             disableElevation
-            onClick={() => props.search(props.taskSearch)}
+            onClick={() => {
+              props.setSearchOn(true);
+              props.setNewSearchCheck(props.taskSearch);
+            }}
             style={{ height: "3.125rem" }}
           >
             Search
@@ -92,7 +96,7 @@ export default (props) => {
             variant="contained"
             color="primary"
             disableElevation
-            onClick={() => props.sort()}
+            onClick={() => props.setSortOn(true)}
             style={{ height: "3.125rem" }}
           >
             Sort
